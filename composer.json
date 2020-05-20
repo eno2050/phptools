@@ -1,0 +1,19 @@
+{
+    "name": "eno2050/phptools",
+    "description": "工具",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "moon2050",
+            "email": "117908549@qq.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Eno2050\\Phptools\\": "src/Eno2050/Phptools"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {}
+}

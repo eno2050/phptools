@@ -22,8 +22,12 @@ php开发工具包
 
 
 - changeKeyCase
-	```
-		@param array $arr 要转换的数组
-		@param boolean $flag 默认true 转换成大写
-		@return array
-	```
+```	
+/*
+	@param array $arr 要转换的数组
+	@param boolean $flag 默认true 转换成大写
+	@return array
+*/
+	public function changeKeyCase(array $arr, $flag = true);
+
+```

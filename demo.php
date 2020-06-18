@@ -42,9 +42,114 @@ use Eno2050\Phptools\ArrayTools;
 // 
 $arr = array(
 	'apple' => 100,
-	'orange' => 1000,
+	'orange' => 100,
+	'pear'   => 100,
+	'banner' => 2000,
+	'watermelon' => 5000,
+	'peach'    => 3000,
+	'durian'   => 4000,
 );
 
-var_dump(ArrayTools::getInstance()->changeKeyCase($arr, true));
+$fruits = array('apple', 'orange', 'pear', 'banner', 'watermelon', 'peach', 'durian');
+
+$user = array(
+  array(
+    'id' => 5698,
+    'first_name' => 'Bill',
+    'last_name' => 'Gates',
+  ),
+  array(
+    'id' => 4767,
+    'first_name' => 'Steve',
+    'last_name' => 'Jobs',
+  ),
+  array(
+    'id' => 3809,
+    'first_name' => 'Mark',
+    'last_name' => 'Zuckerberg',
+  )
+);
+
+$user2 = array(
+  array(
+    'id' => 5698,
+    'first_name' => 'Bill2',
+    'last_name' => 'Gates',
+  ),
+  array(
+    'id' => 4767,
+    'first_name' => 'Steve2',
+    'last_name' => 'Jobs',
+  ),
+  array(
+    'id' => 3809,
+    'first_name' => 'Mark2',
+    'last_name' => 'Zuckerberg',
+  )
+);
+
+
+$keys = array('Bill', 'Jack', 'Mark', 'Steve', 'Lilei');
+$values = array(18, 19, 20, 21);
+
+
+//var_dump(array_keys($keys));
+
+// $newKeys = array_map(function($v) {
+// 	$v['id'] = $v['id'] + 1;
+// 	$v['first_name'] = strtoupper($v['first_name']);
+// 	$v['last_name'] = strtolower($v['last_name']);
+// 	return $v;
+// }, $user);
+// 
+
+$info = " is the firstName";
+
+
+// array_walk($user, function(&$v, $k){
+//   $v['first_name'] = strtoupper($v['first_name']);
+// });
+// 
+function myFunc($v, $k, $info) {
+  $v['first_name'] = strtoupper($v['first_name']) . $info;
+}
+
+
+//array_walk($user, 'myFunc', $info);
+
+//var_dump($user);
+//
+//$a=array("a"=>"red","b"=>"green","c"=>"blue");
+array_walk($user, function(&$v, $k, $p){
+
+  $v['first_name'] =  $v['first_name'] . $p[0] . "\n";
+  $v['last_name'] =  $v['last_name'] . $p[1] . "\n";
+
+}, array(' is first_name', ' is last_name'));
+
+
+//var_dump($user);
+//
+
+echo array_sum(range(1, 10));
+
+
+
+
+
+
+
+
+
+// var_dump(ArrayTools::getInstance()->arrayChangeKeyCase($arr, true));
+// var_dump(ArrayTools::getInstance()->arrayChunk($fruits, 2));
+// var_dump(ArrayTools::getInstance()->arrayColumn($user, 'first_name'));
+//
+// try {
+// 	var_dump(ArrayTools::getInstance()->arrayCombine($keys, $values));
+// } catch( Exception $e) {
+// 	var_dump($e);
+// }
+// var_dump(ArrayTools::getInstance()->arrayCountValues($arr));
 
 

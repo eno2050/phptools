@@ -1,6 +1,12 @@
 # phptools
 php开发工具包
 
+## 安装
+```
+composer require eno2050/phptools
+```
+
+
 ## 实例化单例类
 
 ```

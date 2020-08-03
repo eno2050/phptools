@@ -17,6 +17,7 @@
     "minimum-stability": "dev",
     "require": {
         "guzzlehttp/guzzle": "6.5.x-dev",
-        "symfony/dom-crawler": "4.4.x-dev"
+        "symfony/dom-crawler": "4.4.x-dev",
+        "endroid/qr-code": "^3.5"
     }
 }

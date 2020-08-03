@@ -28,5 +28,18 @@ class StringTools
         $keyword = urldecode($keyword); //将过滤后的关键字解码
         return $keyword;
     }
+    /**
+     * 计算中文字符串长度	
+     * @param  String $string 要计算的字符串
+     * @return Number
+     */
+    public function count_strlen($string)
+    {
+    	// 第一步 判断字符串中文编码的类型
+        $fileType = mb_detect_encoding($string, array('UTF-8', 'GBK', 'LATIN1', 'BIG5')); 
+        // 第二部 根据字符编码计算字符串长度
+        $length = iconv_strlen($string, $fileType); 
+        return $length;
+    }
 
 }
